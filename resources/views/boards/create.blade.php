@@ -9,7 +9,7 @@
   </ul>
 @endif
 
-<form class="board-page-wrapper" action="/boards" method="post">
+<form class="board-page-wrapper" action="{{ route('boards.store') }}" method="post">
 @csrf
   <input type="text" class="form-control m-1" id="title-input" placeholder="タイトル" name="title">
   <div class="row">

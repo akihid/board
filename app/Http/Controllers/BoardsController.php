@@ -58,24 +58,26 @@ class BoardsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Board  $board
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Board $board)
     {
-        //
+      return view('boards.edit', compact('board'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\BoardRequest  $request
+     * @param  Board  $board
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BoardRequest $request, Board $board)
     {
-        //
+      $board->update($request->validated());
+  
+      return redirect()->route('boards.index')->with('message', '更新しました');
     }
 
     /**
