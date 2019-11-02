@@ -11,7 +11,7 @@
       <textarea name="body" id="markdown_editor_textarea" cols="30" rows="10" class="form-control"></textarea>
     </div>
     <div class="col-6 m-1">
-      <textarea name="preview_body" id="markdown_preview" cols="30" rows="10"></textarea>
+      <div id="markdown_preview"></div>
     </div>
   </div>
   <div class="board-page-footer">
