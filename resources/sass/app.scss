@@ -6,3 +6,25 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+html {
+  font-family: sans-serif;
+  line-height: 1.1;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+nav {
+  background-color:#55C500;
+}
+#post-link {
+  background-color: #3F9201;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5%;
+}
