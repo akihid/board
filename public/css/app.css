@@ -11190,6 +11190,11 @@ a {
   color: gray;
 }
 
+.item-page-wrapper .item-wrapper .item-header .user-name {
+  margin-left: 1.2rem;
+  color: gray;
+}
+
 .item-page-wrapper .item-wrapper .item-header .btn-group .btn {
   margin: 3px;
   border-radius: 5%;
