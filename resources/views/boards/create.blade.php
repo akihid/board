@@ -1,13 +1,7 @@
 @extends('layouts.common')
 @section('content')
 
-@if ($errors->any())
-  <ul class="alert alert-danger">
-    @foreach ($errors->all() as $error)
-      <li>{{ $error }}</li>
-    @endforeach
-  </ul>
-@endif
+@include('errors.form_errors')
 
 <form class="board-page-wrapper" action="{{ route('boards.store') }}" method="post">
 @csrf

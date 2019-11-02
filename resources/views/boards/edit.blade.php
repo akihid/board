@@ -1,14 +1,7 @@
 @extends('layouts.common')
 @section('content')
 
-@if ($errors->any())
-  <ul class="alert alert-danger">
-    @foreach ($errors->all() as $error)
-      <li>{{ $error }}</li>
-    @endforeach
-  </ul>
-@endif
-
+@include('errors.form_errors')
 
 <form class="mt-5" action="{{ route('boards.update', ['board' => $board]) }}" method="POST">
   @csrf
