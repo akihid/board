@@ -83,11 +83,13 @@ class BoardsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Board  $board
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Board $board)
     {
-        //
+      $board->delete();
+
+      return redirect()->route('boards.index')->with('message', '削除しました');
     }
 }
