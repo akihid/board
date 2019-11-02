@@ -17,7 +17,9 @@ class BoardsController extends Controller
      */
     public function index()
     {
-        //
+      $boards = Board::latest('created_at')->get();
+
+      return view('boards.index', compact('boards'));
     }
 
     /**
@@ -40,7 +42,7 @@ class BoardsController extends Controller
     {
       $board = Auth::user()->boards()->create($request->validated());
 
-      return redirect('/');
+      return redirect()->route('boards.index')->with('message', '投稿しました');
     }
     /**
      * Display the specified resource.
