@@ -47,12 +47,12 @@ class BoardsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Board  $board
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Board $board)
     {
-        //
+      return view('boards.show', compact('board'));
     }
 
     /**
