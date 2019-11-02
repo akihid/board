@@ -11115,10 +11115,127 @@ nav {
   background-color: #55C500;
 }
 
+a {
+  color: gray;
+}
+
 #post-link {
   background-color: #3F9201;
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 5%;
+}
+
+.board-page-wrapper #title-input {
+  height: 3rem;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.board-page-wrapper .row {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.board-page-wrapper .row .col-6 {
+  padding: 0rem;
+  -webkit-box-flex: 0;
+          flex: none;
+  width: 48%;
+}
+
+.board-page-wrapper .row .col-6 #markdown_editor_textarea {
+  padding: 1rem;
+  height: 29rem;
+  width: 100%;
+}
+
+.board-page-wrapper .row .col-6 #markdown_preview {
+  color: #495057;
+  padding: 1rem;
+  height: 29rem;
+  width: 100%;
+  background-color: white;
+  border: solid 1px gray;
+}
+
+.board-page-wrapper .board-page-footer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+}
+
+.board-page-wrapper .post-button {
+  background-color: #3F9201;
+  color: white;
+  padding-right: 1rem;
+  border-radius: 5%;
+  width: 7rem;
+  height: 2rem;
+  margin-right: 1rem !important;
+}
+
+.item-page-wrapper {
+  background-color: #f8f9fc;
+}
+
+.item-page-wrapper .item-wrapper {
+  background-color: white;
+  margin: 3rem 5rem;
+  padding: 3rem;
+}
+
+.item-page-wrapper .item-wrapper .item-header .date {
+  color: gray;
+}
+
+.item-page-wrapper .item-wrapper .item-header .btn-group .btn {
+  margin: 3px;
+  border-radius: 5%;
+}
+
+.item-page-wrapper .item-wrapper .item-title {
+  font-size: 4rem;
+  margin-top: 1.2rem;
+  font-weight: bold;
+}
+
+.item-page-wrapper .item-wrapper .item-body {
+  margin-top: 2rem;
+}
+
+.boards-wrapper {
+  background-color: white;
+  margin: 0px auto;
+  padding: 20px;
+  height: 100vh;
+}
+
+.boards-wrapper h1 {
+  color: #777;
+  text-align: center;
+}
+
+.boards-wrapper .board-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 20px;
+  border-bottom: solid 3px #F6F6F6;
+}
+
+.boards-wrapper .board-box .board-box-right {
+  padding-left: 20px;
+}
+
+.boards-wrapper .board-box .board-box-right .board-title {
+  color: #777;
+  font-weight: bold;
+}
+
+.boards-wrapper .board-box .board-box-right .board-date {
+  color: gray;
 }
 
