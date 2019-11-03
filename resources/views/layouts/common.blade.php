@@ -6,7 +6,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Board</title>
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
-        <link href="https://raw.githubusercontent.com/simonlc/Markdown-CSS/master/markdown.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/darcula.min.css">
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <script src="{{ mix('js/app.js') }}"></script>
     </head>
     <body>
