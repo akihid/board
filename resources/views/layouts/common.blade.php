@@ -14,6 +14,11 @@
     <body>
         @include('layouts.navbar')
         <main class="py-4">
+
+          @if (session('message'))
+            <div class="alert alert-success">{{ session('message') }}</div>
+          @endif
+
           @yield('content')
         </main>
     </body>
