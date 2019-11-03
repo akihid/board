@@ -11278,3 +11278,20 @@ a {
   border-radius: 5%;
 }
 
+.comment-wrapper {
+  background-color: white;
+  margin: 3rem 5rem;
+  padding: 3rem;
+}
+
+.comment-wrapper .comment-main .comment-body {
+  margin-left: 1.2rem;
+  font-weight: bold;
+}
+
+.comment-wrapper .comment-main .comment-footer {
+  color: gray;
+  text-align: right;
+  border-bottom: solid 3px #F8F9FC;
+}
+

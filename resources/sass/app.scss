@@ -157,3 +157,19 @@ a{
     }
   }
 }
+  .comment-wrapper {
+    background-color: white;
+    margin: 3rem 5rem;
+    padding: 3rem;
+    .comment-main {
+      .comment-body {
+        margin-left: 1.2rem;
+        font-weight: bold;
+      }
+      .comment-footer {
+        color: gray;
+        text-align: right;
+        border-bottom: solid 3px #F8F9FC;
+      }
+    }
+  }
