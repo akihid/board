@@ -11247,3 +11247,34 @@ a {
   color: gray;
 }
 
+.search-wrapper {
+  background-color: white;
+  margin: 0px auto;
+  padding: 20px;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.search-wrapper .search-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  border-bottom: solid 3px #F6F6F6;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.search-wrapper .search-box .form-group {
+  margin: 0px;
+}
+
+.search-wrapper .search-box .form-group input[type=text] {
+  width: 300px;
+}
+
+.search-wrapper .search-box .btn-group .btn {
+  margin: 3px;
+  border-radius: 5%;
+}
+

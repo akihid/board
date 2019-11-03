@@ -134,3 +134,26 @@ a{
     }
   }
 }
+
+.search-wrapper {
+  background-color: white;
+  margin: 0px auto;
+  padding: 20px;
+  justify-content: center;
+  .search-box {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 3px #F6F6F6;
+    justify-content: center;
+    .form-group{
+      margin: 0px;
+      input[type="text"]{
+        width: 300px;
+      }
+    }
+    .btn-group .btn{
+      margin: 3px;
+      border-radius: 5%;
+    }
+  }
+}

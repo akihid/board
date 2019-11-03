@@ -12,14 +12,20 @@ class BoardsController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      $boards = Board::latest('created_at')->get();
+      if (empty($request->keyword)) {
+        $keyword = null;
+        $boards = Board::latest('created_at')->get();
+      } else {
+        $keyword = $request->keyword;
+        $boards = Board::latest('created_at')->where('title', 'LIKE', "%$keyword%")->get();
+      }
 
-      return view('boards.index', compact('boards'));
+      return view('boards.index', compact('boards', 'keyword'));
     }
 
     /**
