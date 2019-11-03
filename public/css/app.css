@@ -11291,7 +11291,10 @@ a {
 
 .comment-wrapper .comment-main .comment-footer {
   color: gray;
-  text-align: right;
   border-bottom: solid 3px #F8F9FC;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
 }
 

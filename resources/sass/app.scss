@@ -168,8 +168,9 @@ a{
       }
       .comment-footer {
         color: gray;
-        text-align: right;
         border-bottom: solid 3px #F8F9FC;
+        display:flex;
+        justify-content: flex-end;
       }
     }
   }
