@@ -13,7 +13,7 @@
       @else
         <!-- ログイン時 -->
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">お気に入り一覧</a>
+          <a class="nav-link text-white" href="{{ route('boards.index') }}">投稿一覧</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" id="post-link" href="{{ route('boards.create') }}">投稿する</a>
