@@ -125,6 +125,10 @@ nav {
   align-items: center;
   padding: 20px;
   border-bottom: solid 3px #F6F6F6;
+  .board-box-left {
+    height: 40px;
+    width: 40px;
+  }
   .board-box-right {
     padding-left: 20px;
     .board-title {
@@ -205,4 +209,8 @@ nav {
 
 .avator_img_def {
   height: 150px;
+}
+
+.avator_img_min {
+  height: 40px;
 }
