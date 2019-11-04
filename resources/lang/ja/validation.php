@@ -150,6 +150,7 @@ return [
       'password' => 'パスワード',
       'title' => 'タイトル',
       'body' => '本文',
+      'avator_url' => 'ユーザーアイコン',
     ],
 
 ];

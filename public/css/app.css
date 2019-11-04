@@ -17009,10 +17009,6 @@ nav {
   background-color: #55C500;
 }
 
-a {
-  color: gray;
-}
-
 #post-link {
   background-color: #3F9201;
   padding-left: 1rem;
@@ -17082,13 +17078,15 @@ a {
   padding: 3rem;
 }
 
-.item-page-wrapper .item-wrapper .item-header .date {
+.item-page-wrapper .item-wrapper .item-header {
   color: gray;
 }
 
-.item-page-wrapper .item-wrapper .item-header .user-name {
+.item-page-wrapper .item-wrapper .item-header span {
   margin-left: 1.2rem;
-  color: gray;
+}
+
+.item-page-wrapper .item-wrapper .item-header .user-name {
   font-weight: bold;
 }
 
@@ -17119,7 +17117,7 @@ a {
   text-align: center;
 }
 
-.boards-wrapper .board-box {
+.board-box {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -17128,16 +17126,21 @@ a {
   border-bottom: solid 3px #F6F6F6;
 }
 
-.boards-wrapper .board-box .board-box-right {
+.board-box .board-box-left {
+  height: 40px;
+  width: 40px;
+}
+
+.board-box .board-box-right {
   padding-left: 20px;
 }
 
-.boards-wrapper .board-box .board-box-right .board-title {
+.board-box .board-box-right .board-title {
   color: #777;
   font-weight: bold;
 }
 
-.boards-wrapper .board-box .board-box-right .board-date {
+.board-box .board-box-right .board-date {
   color: gray;
 }
 
@@ -17189,5 +17192,47 @@ a {
   display: flex;
   -webkit-box-pack: end;
           justify-content: flex-end;
+}
+
+.user-page-wrapper {
+  background-color: #f8f9fc;
+}
+
+.user-page-wrapper .user-info-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 3rem;
+}
+
+.user-page-wrapper .user-info-wrapper .user-info-box-left {
+  width: 20%;
+}
+
+.user-page-wrapper .user-info-wrapper .user-info-box-right {
+  padding-left: 20px;
+  width: 80%;
+}
+
+.user-page-wrapper .user-info-wrapper .user-info-box-right .user-detail {
+  background-color: #F9F9F9;
+  height: 150px;
+  width: 100%;
+}
+
+.user-page-wrapper .user-board-wrapper {
+  background-color: white;
+  margin: 3rem 5rem;
+  padding: 3rem;
+}
+
+.avator_img_def {
+  height: 150px;
+}
+
+.avator_img_min {
+  height: 40px;
 }
 

@@ -28,9 +28,6 @@ body {
 nav {
   background-color:#55C500;
 }
-a{
-  color: gray;
-}
 
 #post-link {
   background-color: #3F9201;
@@ -90,12 +87,11 @@ a{
     margin: 3rem 5rem;
     padding: 3rem;
     .item-header {
-      .date {
-        color: gray;
+      color: gray;
+      span{
+        margin-left: 1.2rem;
       }
       .user-name {
-        margin-left: 1.2rem;
-        color: gray;
         font-weight: bold;
       }
       .btn{
@@ -123,20 +119,24 @@ a{
     color: #777;
     text-align: center;
   }
-  .board-box {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-bottom: solid 3px #F6F6F6;
-    .board-box-right {
-      padding-left: 20px;
-      .board-title {
-        color: #777;
-        font-weight: bold;
-      }
-      .board-date {
-        color: gray;
-      }
+}
+.board-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: solid 3px #F6F6F6;
+  .board-box-left {
+    height: 40px;
+    width: 40px;
+  }
+  .board-box-right {
+    padding-left: 20px;
+    .board-title {
+      color: #777;
+      font-weight: bold;
+    }
+    .board-date {
+      color: gray;
     }
   }
 }
@@ -163,19 +163,54 @@ a{
     }
   }
 }
-  .comment-wrapper {
+.comment-wrapper {
+  background-color: white;
+  margin: 3rem 5rem;
+  padding: 3rem;
+  .comment-main {
+    .comment-body {
+      margin-left: 1.2rem;
+    }
+    .comment-footer {
+      color: gray;
+      border-bottom: solid 3px #F8F9FC;
+      display:flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.user-page-wrapper {
+  background-color: #f8f9fc;
+  .user-info-wrapper {
+    display: flex;
+    align-items: center;
     background-color: white;
-    margin: 3rem 5rem;
     padding: 3rem;
-    .comment-main {
-      .comment-body {
-        margin-left: 1.2rem;
-      }
-      .comment-footer {
-        color: gray;
-        border-bottom: solid 3px #F8F9FC;
-        display:flex;
-        justify-content: flex-end;
+    .user-info-box-left {
+      width: 20%;
+    }
+    .user-info-box-right {
+      padding-left: 20px;
+      width: 80%;
+      .user-detail {
+        background-color: #F9F9F9;
+        height: 150px;
+        width: 100%;
       }
     }
   }
+  .user-board-wrapper {
+    background-color: white;
+    margin: 3rem 5rem;
+    padding: 3rem;
+  }
+}
+
+.avator_img_def {
+  height: 150px;
+}
+
+.avator_img_min {
+  height: 40px;
+}
