@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
 
 class BoardsController extends Controller
 {
+
+    public function __construct()
+    {
+      $this->middleware('auth')->except(['index', 'show']);
+    }
+
     /**
      * Display a listing of the resource.
      * @param  \Illuminate\Http\Request  $request
@@ -57,8 +63,11 @@ class BoardsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Board $board)
-    {
-      $like = $board->likes()->where('user_id', Auth::user()->id)->first();
+    { 
+      $like = null;
+      if (Auth::check()) {
+        $like = $board->likes()->where('user_id', Auth::user()->id)->first();
+      } 
       return view('boards.show', compact('board', 'like'));
     }
 

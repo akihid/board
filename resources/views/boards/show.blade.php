@@ -17,22 +17,23 @@
         </div>
       @endif
 
+      @auth
       @if ($like)
-        <form method="post" action="{{ route('likes.destroy', ['like'=>$like]) }}">
+          <form method="post" action="{{ route('likes.destroy', ['like'=>$like]) }}">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger btn-sm ml-3"><i class="fas fa-thumbs-up fa-fw"></i>いいね済み！{{ $board->likes->count()}}</button>
+          </form>
+        @else
+          <form method="POST" action="{{ route('likes.store') }}">
             @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger btn-sm ml-3"><i class="fas fa-thumbs-up fa-fw"></i>いいね済み！{{ $board->likes->count()}}</button>
-        </form>
-      @else
-        <form method="POST" action="{{ route('likes.store') }}">
-          @csrf
 
-          <input name="board_id" type="hidden" value="{{ $board->id }}">
-          <input name="user_id" type="hidden"  value="{{ Auth::id() }}">
-          <button type="submit" class="btn btn-primary btn-sm ml-3"><i class="fas fa-thumbs-up fa-fw"></i>いいね！{{ $board->likes->count()}}</button>
-        </form>
-      @endif
-
+            <input name="board_id" type="hidden" value="{{ $board->id }}">
+            <input name="user_id" type="hidden"  value="{{ Auth::id() }}">
+            <button type="submit" class="btn btn-primary btn-sm ml-3"><i class="fas fa-thumbs-up fa-fw"></i>いいね！{{ $board->likes->count()}}</button>
+          </form>
+        @endif
+      @endauth
     </div>
     <div class="item-title">{{$board->title}}</div>
     <div class="item-body">{{$board->body}}</div>
@@ -61,21 +62,23 @@
       <p>コメントはまだありません。</p>
     @endforelse
 
-    <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
-      @csrf
+    @auth
+      <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
+        @csrf
 
-      <input name="board_id" type="hidden" value="{{ $board->id }}">
-      <input name="user_id" type="hidden"  value="{{ Auth::id() }}">
+        <input name="board_id" type="hidden" value="{{ $board->id }}">
+        <input name="user_id" type="hidden"  value="{{ Auth::id() }}">
 
-      <div class="form-group">
-        <label for="body">本文</label>
-        <textarea id="body" name="body" class="form-control" rows="4">{{ old('body') }}</textarea>
-      </div>
+        <div class="form-group">
+          <label for="body">本文</label>
+          <textarea id="body" name="body" class="form-control" rows="4">{{ old('body') }}</textarea>
+        </div>
 
-      <div class="mt-4 text-center">
-        <button type="submit" class="btn btn-primary">コメントする</button>
-      </div>
-    </form>
+        <div class="mt-4 text-center">
+          <button type="submit" class="btn btn-primary">コメントする</button>
+        </div>
+      </form>
+    @endauth
   </div>
 </div>
 
