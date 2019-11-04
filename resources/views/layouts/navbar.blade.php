@@ -24,6 +24,7 @@
             {{ Auth::user()->name }} <span class="caret"></span>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ route('users.show', ['user'=>Auth::user()]) }}">マイページ</a>
             <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
               ログアウト
             </a>

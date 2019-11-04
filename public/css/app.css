@@ -17191,3 +17191,19 @@ a {
           justify-content: flex-end;
 }
 
+.user-page-wrapper {
+  background-color: #f8f9fc;
+}
+
+.user-page-wrapper .user-info-wrapper {
+  background-color: white;
+  margin: 3rem 5rem;
+  padding: 3rem;
+}
+
+.user-page-wrapper .user-board-wrapper {
+  background-color: white;
+  margin: 3rem 5rem;
+  padding: 3rem;
+}
+
