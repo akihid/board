@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('boards', 'BoardsController');
 Route::resource('comments', 'CommentsController', ['only' => ['store', 'destroy']]);
+Route::resource('likes', 'LikesController', ['only' => ['store', 'destroy']]);

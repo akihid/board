@@ -58,7 +58,8 @@ class BoardsController extends Controller
      */
     public function show(Board $board)
     {
-      return view('boards.show', compact('board'));
+      $like = $board->likes()->where('user_id', Auth::user()->id)->first();
+      return view('boards.show', compact('board', 'like'));
     }
 
     /**

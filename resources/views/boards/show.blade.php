@@ -3,7 +3,7 @@
 
 <div class="item-page-wrapper">
   <div class="item-wrapper">
-    <div class="item-header">
+    <div class="item-header d-flex align-items-center">
       <span class="date">{{$board->created_at}}</span>
       @if ($board->user_id == Auth::id())
         <div class="btn-group">
@@ -17,6 +17,23 @@
       @else
         <span class="user-name">投稿者: {{$board->user->name}}</span>
       @endif
+
+      @if ($like)
+        <form method="post" action="{{ route('likes.destroy', ['like'=>$like]) }}">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger btn-sm ml-3"><i class="fas fa-thumbs-up fa-fw"></i>いいね済み！{{ $board->likes->count()}}</button>
+        </form>
+      @else
+        <form method="POST" action="{{ route('likes.store') }}">
+          @csrf
+
+          <input name="board_id" type="hidden" value="{{ $board->id }}">
+          <input name="user_id" type="hidden"  value="{{ Auth::id() }}">
+          <button type="submit" class="btn btn-primary btn-sm ml-3"><i class="fas fa-thumbs-up fa-fw"></i>いいね！{{ $board->likes->count()}}</button>
+        </form>
+      @endif
+
     </div>
     <div class="item-title">{{$board->title}}</div>
     <div class="item-body">{{$board->body}}</div>

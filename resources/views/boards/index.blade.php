@@ -5,7 +5,7 @@
     <div class="search-wrapper col-md-6">
       <form class="search-box" action="{{ route('boards.index') }}" method="GET">
         <div class="form-group">
-          <input type="text" name="keyword" value="{{$keyword}}" class="form-control" placeholder="タイトルを入力してください">
+          <input type="text" name="keyword" value="{{empty($keyword) ? null : $keyword}}" class="form-control" placeholder="タイトルを入力してください">
         </div>
         <div class="btn-group">
           <input type="submit" value="検索" class="btn btn-primary">
