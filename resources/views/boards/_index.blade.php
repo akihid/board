@@ -1,4 +1,4 @@
-@foreach ($boards as $board)
+@forelse ($boards as $board)
   
   <div class="board-box">
     <div class="board-box-left">
@@ -19,5 +19,7 @@
       </a>
     </div>
   </div>
-  
-@endforeach
+
+@empty
+  <p>まだ投稿がありません。</p>
+@endforelse

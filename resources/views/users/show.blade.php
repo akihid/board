@@ -32,7 +32,7 @@
     </div>
     <div class="user-board-wrapper col-md-5">
       <h1>いいね一覧</h1>
-      @foreach ($likes as $like)
+      @forelse ($likes as $like)
         
         <div class="board-box">
           <div class="board-box-left">
@@ -53,7 +53,9 @@
             </a>
           </div>
         </div>
-      @endforeach
+      @empty
+        <p>まだいいねをしていません。</p>
+      @endforelse
     </div>
   </div>
 
