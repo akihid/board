@@ -5,6 +5,7 @@
   <div class="item-wrapper">
     <div class="item-header d-flex align-items-center">
       <span class="date">{{$board->created_at}}</span>
+      <span>投稿者: <a class="text-primary" href="{{ route('users.show', ['user'=>$board->user]) }}">{{$board->user->name}}</a></span>
       @if ($board->user_id == Auth::id())
         <div class="btn-group">
           <a class="btn btn-primary btn-sm" href="{{ route('boards.edit', ['board'=>$board]) }}">修正する</a>
@@ -14,8 +15,6 @@
             <input type="submit" value="削除" class="btn btn-danger btn-sm" onclick='return confirm("本当に削除しますか？");'>
           </form>
         </div>
-      @else
-        <span class="user-name">投稿者: {{$board->user->name}}</span>
       @endif
 
       @if ($like)
@@ -47,7 +46,7 @@
       <div class="comment-main border-top">
         <div class="comment-body">{!!  nl2br($comment->body) !!}</div>
         <div class="comment-footer">
-          <span class="comment-user">投稿者:{{$comment->user->name}} </span>
+          <span>投稿者: <a class="text-primary" href="{{ route('users.show', ['user'=>$comment->user]) }}">{{$comment->user->name}}</a></span>
           <span class="date">{{$comment->created_at}}</span>
           @if ($comment->user_id == Auth::id())
             <form method="post" action="{{ route('comments.destroy', ['comment'=>$comment]) }}">

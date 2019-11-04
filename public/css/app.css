@@ -17009,10 +17009,6 @@ nav {
   background-color: #55C500;
 }
 
-a {
-  color: gray;
-}
-
 #post-link {
   background-color: #3F9201;
   padding-left: 1rem;
@@ -17082,13 +17078,15 @@ a {
   padding: 3rem;
 }
 
-.item-page-wrapper .item-wrapper .item-header .date {
+.item-page-wrapper .item-wrapper .item-header {
   color: gray;
 }
 
-.item-page-wrapper .item-wrapper .item-header .user-name {
+.item-page-wrapper .item-wrapper .item-header span {
   margin-left: 1.2rem;
-  color: gray;
+}
+
+.item-page-wrapper .item-wrapper .item-header .user-name {
   font-weight: bold;
 }
 

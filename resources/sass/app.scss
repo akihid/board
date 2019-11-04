@@ -28,9 +28,6 @@ body {
 nav {
   background-color:#55C500;
 }
-a{
-  color: gray;
-}
 
 #post-link {
   background-color: #3F9201;
@@ -90,12 +87,11 @@ a{
     margin: 3rem 5rem;
     padding: 3rem;
     .item-header {
-      .date {
-        color: gray;
+      color: gray;
+      span{
+        margin-left: 1.2rem;
       }
       .user-name {
-        margin-left: 1.2rem;
-        color: gray;
         font-weight: bold;
       }
       .btn{
