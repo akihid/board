@@ -17,12 +17,14 @@
 html {
   font-family: sans-serif;
   line-height: 1.1;
+  height: 100%;
 }
 
 body {
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
+  height: 100%;
 }
 
 nav {
@@ -204,6 +206,19 @@ nav {
     background-color: white;
     margin: 3rem 5rem;
     padding: 3rem;
+  }
+}
+
+.top-wrapper {
+  .top-box{
+    color: #55C500;
+    h1 {
+      font-size: 50px;
+    }
+    a{
+      color: #55C500;
+      display:block;
+    }  
   }
 }
 
