@@ -79,6 +79,9 @@ class BoardsController extends Controller
      */
     public function edit(Board $board)
     {
+      if ($board->user_id !== Auth::id()) {
+        return redirect()->route('boards.show', ['board'=>$board])->with('message', '編集する権限がありません');
+      }
       return view('boards.edit', compact('board'));
     }
 

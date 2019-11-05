@@ -16997,12 +16997,14 @@ readers do not read off random characters that represent icons */
 html {
   font-family: sans-serif;
   line-height: 1.1;
+  height: 100%;
 }
 
 body {
   font-size: 16px;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
+  height: 100%;
 }
 
 nav {
@@ -17226,6 +17228,20 @@ nav {
   background-color: white;
   margin: 3rem 5rem;
   padding: 3rem;
+}
+
+.top-wrapper .top-box {
+  color: #55C500;
+}
+
+.top-wrapper .top-box h1 {
+  font-size: 50px;
+}
+
+.top-wrapper .top-box a {
+  color: #55C500;
+  margin: 0 auto;
+  display: block;
 }
 
 .avator_img_def {
