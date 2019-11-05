@@ -7,7 +7,7 @@ $(function() {
 		langPrefix: '',
 		breaks : true,
 		sanitize: true,
-	});
+  });
 
 	$('#markdown_editor_textarea').keyup(function() {
 		var html = marked(getHtml($(this).val()));

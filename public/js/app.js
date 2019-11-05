@@ -38643,6 +38643,9 @@ $(function () {
     breaks: true,
     sanitize: true
   });
+  var html = marked__WEBPACK_IMPORTED_MODULE_0___default()(getHtml($(this).val()));
+  $('#markdown_preview').html(html);
+  highlight();
   $('#markdown_editor_textarea').keyup(function () {
     var html = marked__WEBPACK_IMPORTED_MODULE_0___default()(getHtml($(this).val()));
     $('#markdown_preview').html(html);
