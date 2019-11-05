@@ -24,11 +24,12 @@ class UsersTableSeeder extends Seeder
       ]);
 
       for ($i = 1; $i <= 10; $i++) {
+        $name = $faker->name;
         App\User::create([
-          'name' => $faker->name,
+          'name' => $name,
           'email' => 'ユーザー' . $i . '@co.jp',
           'password' => Hash::make('password'),
-          'detail' => 'ユーザー' . $i . 'です',
+          'detail' => $name . 'です',
         ]);
       }
     }
