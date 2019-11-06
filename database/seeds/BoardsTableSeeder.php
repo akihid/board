@@ -59,23 +59,23 @@ class BoardsTableSeeder extends Seeder
           ***
         EOF
       );
+      //ページネーション確認用データ
+      $faker = Faker::create('ja_JP');
+      for ($i = 1; $i <= 10; $i++) {
+        $user = App\User::inRandomOrder()->first();
+        App\Board::create([
+          'title' => $faker->realText(10),
+          'body' => $faker->realText(20),
+          'user_id' => $user->id,
+        ]);
+      }
+
       // マークダウンデータ
       foreach ($data as $key => $value) {
         $user = App\User::inRandomOrder()->first();
         App\Board::create([
           'title' => $key,
           'body' => $value,
-          'user_id' => $user->id,
-        ]);
-      }
-
-      //ページネーション確認用データ
-      $faker = Faker::create('ja_JP');
-      for ($i = 1; $i <= 10; $i++) {
-        $user = App\User::inRandomOrder()->first();
-        App\Board::create([
-          'title' => $faker->word,
-          'body' => $faker->realText(20),
           'user_id' => $user->id,
         ]);
       }
