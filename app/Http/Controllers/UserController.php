@@ -23,9 +23,10 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-      $boards = $user->boards;
-      $likes = $user->likes;
-      return view('users.show', compact('user', 'boards', 'likes'));
+      $boards = $user->boards->take(5);
+      $likes = $user->likes->take(5);
+      $comments = $user->comments->take(5);;
+      return view('users.show', compact('user', 'boards', 'likes', 'comments'));
     }
 
     /**

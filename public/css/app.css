@@ -17007,7 +17007,7 @@ body {
   height: 100%;
 }
 
-nav {
+.navbar {
   background-color: #55C500;
 }
 
@@ -17225,7 +17225,6 @@ nav {
 }
 
 .user-page-wrapper .user-board-wrapper {
-  background-color: white;
   margin: 3rem 5rem;
   padding: 3rem;
 }
@@ -17241,6 +17240,11 @@ nav {
 .top-wrapper .top-box a {
   color: #55C500;
   display: block;
+}
+
+.pagination {
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .avator_img_def {

@@ -25,10 +25,10 @@ class BoardsController extends Controller
     {
       if (empty($request->keyword)) {
         $keyword = null;
-        $boards = Board::latest('created_at')->get();
+        $boards = Board::latest('created_at')->paginate(8);;
       } else {
         $keyword = $request->keyword;
-        $boards = Board::latest('created_at')->where('title', 'LIKE', "%$keyword%")->get();
+        $boards = Board::latest('created_at')->where('title', 'LIKE', "%$keyword%")->paginate(8);;
       }
 
       return view('boards.index', compact('boards', 'keyword'));
