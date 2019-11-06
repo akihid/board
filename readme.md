@@ -6,9 +6,9 @@
 - ログイン機能
 - ユーザー作成編集
 - 掲示板CRUD機能
-  - 投稿はマークダウン・シンタックスハイライト対応対応
+  - 投稿はマークダウン・シンタックスハイライト対応
   - 投稿に対するコメントおよびお気に入り登録機能
   - タイトル検索機能
 
 # テーブル定義
-![ER図](https://user-images.githubusercontent.com/47715043/68225297-8bfa7300-0033-11ea-92ee-5aef349c0cab.png)v
+![ER図](https://user-images.githubusercontent.com/47715043/68225297-8bfa7300-0033-11ea-92ee-5aef349c0cab.png)

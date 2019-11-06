@@ -9,7 +9,7 @@
         <div class="user-info-wrapper">
           <div class="user-info-box-left">
             @isset ($user->avator_url)
-              <img class="avator_img_def" src="{{ asset('/storage/avator_images/'.$user->avator_url) }}" alt="アバター画像">
+              <img class="avator_img_def" src="{{ $user->avator_url }}" alt="アバター画像">
             @else
               <img class="avator_img_def" src="/images/default.jpeg" alt="アバター画像">
             @endisset
@@ -38,7 +38,7 @@
           <div class="board-box-left">
             <a href="{{ route('users.show', ['user'=>$like->board->user]) }}">
               @isset ($like->board->user->avator_url)
-                <img class="avator_img_min" src="{{ asset('/storage/avator_images/'.$like->board->user->avator_url) }}" alt="アバター画像">
+                <img class="avator_img_min" src="{{ $like->board->user->avator_url }}" alt="アバター画像">
               @else
                 <img class="avator_img_min" src="/images/default.jpeg" alt="アバター画像">
               @endisset
