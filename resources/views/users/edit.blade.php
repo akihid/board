@@ -15,7 +15,7 @@
 
               <div class="mb-1">
                 @if(!empty($user->avator_url))
-                  <img class="avator_img_def d-block mx-auto" src="{{ asset('/storage/avator_images/'.$user->avator_url) }}">
+                  <img class="avator_img_def d-block mx-auto" src="{{ $user->avator_url }}">
                 @else
                   <img class="avator_img_def d-block mx-auto" src="/images/default.jpeg" alt="アバター画像">
                 @endif
@@ -38,7 +38,6 @@
               <label for="detail" class="col-form-label text-md-right">紹介文</label>
               <div class="form-group row">
                 <textarea name="detail" id="user-detail" cols="30" rows="5" class="form-control">{{ old('detail', $user->detail) }}</textarea>
-                <!-- <input type="text" class="form-control m-1" id="user-detail" name="detail" value="{{ old('detail', $user->detail) }}"> -->
               </div>
               <div class="form-group row">
               <input type="submit" class="btn btn-primary d-block mx-auto" value="更新">

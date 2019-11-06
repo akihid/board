@@ -11,11 +11,12 @@ class LikesTableSeeder extends Seeder
      */
     public function run()
     {
-      for ($i = App\Board::first()->id; $i <= App\Board::orderBy('id', 'DESC')->first()->id; $i++) {
+      $boards = App\Board::latest('created_at')->get();
+      foreach ($boards as $board) {
         $user = App\User::inRandomOrder()->first();
         App\Like::create([
           'user_id' => $user->id,
-          'board_id' => $i,
+          'board_id' => $board->id,
         ]);
       }
     }

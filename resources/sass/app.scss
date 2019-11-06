@@ -27,7 +27,7 @@ body {
   height: 100%;
 }
 
-nav {
+.navbar {
   background-color:#55C500;
 }
 
@@ -203,7 +203,6 @@ nav {
     }
   }
   .user-board-wrapper {
-    background-color: white;
     margin: 3rem 5rem;
     padding: 3rem;
   }
@@ -220,6 +219,10 @@ nav {
       display:block;
     }  
   }
+}
+
+.pagination {
+  justify-content: center;
 }
 
 .avator_img_def {

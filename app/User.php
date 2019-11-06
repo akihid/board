@@ -38,10 +38,14 @@ class User extends Authenticatable
     ];
 
     public function boards() {
-      return $this->hasMany('App\Board');
+      return $this->hasMany('App\Board')->orderBy('created_at', 'desc');
     }
 
     public function likes() {
-      return $this->hasMany('App\Like');
+      return $this->hasMany('App\Like')->orderBy('created_at', 'desc');
+    }
+
+    public function comments() {
+      return $this->hasMany('App\Comment')->orderBy('created_at', 'desc');
     }
 }
