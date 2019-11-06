@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
         'email' => 'test@co.jp',
         'password' => Hash::make('password'),
         'detail' => 'テストユーザーです。',
+        'avator_url' => 'https://laravel-board-avator.s3.ap-northeast-1.amazonaws.com/ii0Q6HC5kR8HM5I4NOzPkfje0wdF2tE50sdJpNkb.jpeg',
       ]);
 
       for ($i = 1; $i <= 10; $i++) {

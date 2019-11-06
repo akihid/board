@@ -14,12 +14,13 @@ class CommentsTableSeeder extends Seeder
     {
       $faker = Faker::create('ja_JP');
 
-      for ($i = App\Board::first()->id; $i <= App\Board::orderBy('id', 'DESC')->first()->id; $i++) {
+      $boards = App\Board::latest('created_at')->get();
+      foreach ($boards as $board) {
         $user = App\User::inRandomOrder()->first();
         App\Comment::create([
           'body' => $faker->realText(20),
           'user_id' => $user->id,
-          'board_id' => $i,
+          'board_id' => $board->id,
         ]);
       }
     }
