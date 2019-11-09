@@ -38627,15 +38627,14 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! marked */ "./node_modules/marked/lib/marked.js");
-/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./partials/marked */ "./resources/js/partials/marked.js");
+
+__webpack_require__(/*! ./partials/login */ "./resources/js/partials/login.js");
 
 $(document).on('click', '#test-user-login-btn', function () {
   var login_email = 'test@co.jp';
@@ -38645,40 +38644,6 @@ $(document).on('click', '#test-user-login-btn', function () {
   login_email_form.value = login_email;
   login_password_form.value = login_password;
   document.querySelector('#login-btn').click();
-});
-$(function () {
-  marked__WEBPACK_IMPORTED_MODULE_0___default.a.setOptions({
-    langPrefix: '',
-    breaks: true,
-    sanitize: true
-  });
-  $('#markdown_editor_textarea').keyup(function () {
-    var html = marked__WEBPACK_IMPORTED_MODULE_0___default()(getHtml($(this).val()));
-    $('#markdown_preview').html(html);
-    highlight();
-  });
-
-  if ($('.item-body').length) {
-    var target = $('.item-body');
-    var html = marked__WEBPACK_IMPORTED_MODULE_0___default()(getHtml(target.html()));
-    $('.item-body').html(html);
-    highlight();
-  }
-
-  ; // 比較演算子が &lt; 等になるので置換
-
-  function getHtml(html) {
-    html = html.replace(/&lt;/g, '<');
-    html = html.replace(/&gt;/g, '>');
-    html = html.replace(/&amp;/g, '&');
-    return html;
-  }
-
-  function highlight() {
-    $('pre code').each(function (i, block) {
-      hljs.highlightBlock(block);
-    });
-  }
 });
 
 /***/ }),
@@ -38725,6 +38690,74 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/partials/login.js":
+/*!****************************************!*\
+  !*** ./resources/js/partials/login.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).on('click', '#test-user-login-btn', function () {
+  var login_email = 'test@co.jp';
+  var login_password = 'password';
+  var login_email_form = document.querySelector('#email');
+  var login_password_form = document.querySelector('#password');
+  login_email_form.value = login_email;
+  login_password_form.value = login_password;
+  document.querySelector('#login-btn').click();
+});
+
+/***/ }),
+
+/***/ "./resources/js/partials/marked.js":
+/*!*****************************************!*\
+  !*** ./resources/js/partials/marked.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! marked */ "./node_modules/marked/lib/marked.js");
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_0__);
+
+$(function () {
+  marked__WEBPACK_IMPORTED_MODULE_0___default.a.setOptions({
+    langPrefix: '',
+    breaks: true,
+    sanitize: true
+  });
+  $('#markdown_editor_textarea').keyup(function () {
+    var html = marked__WEBPACK_IMPORTED_MODULE_0___default()(getHtml($(this).val()));
+    $('#markdown_preview').html(html);
+    highlight();
+  });
+
+  if ($('.item-body').length) {
+    var target = $('.item-body');
+    var html = marked__WEBPACK_IMPORTED_MODULE_0___default()(getHtml(target.html()));
+    $('.item-body').html(html);
+    highlight();
+  }
+
+  ; // 比較演算子が &lt; 等になるので置換
+
+  function getHtml(html) {
+    html = html.replace(/&lt;/g, '<');
+    html = html.replace(/&gt;/g, '>');
+    html = html.replace(/&amp;/g, '&');
+    return html;
+  }
+
+  function highlight() {
+    $('pre code').each(function (i, block) {
+      hljs.highlightBlock(block);
+    });
+  }
+});
 
 /***/ }),
 
