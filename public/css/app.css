@@ -16994,30 +16994,6 @@ readers do not read off random characters that represent icons */
   font-family: "Font Awesome 5 Brands";
 }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.1;
-  height: 100%;
-}
-
-body {
-  font-size: 16px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  height: 100%;
-}
-
-.navbar {
-  background-color: #55C500;
-}
-
-#post-link {
-  background-color: #3F9201;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 5%;
-}
-
 .board-page-wrapper #title-input {
   height: 3rem;
   -webkit-box-pack: center;
@@ -17227,6 +17203,30 @@ body {
 .user-page-wrapper .user-board-wrapper {
   margin: 3rem 5rem;
   padding: 3rem;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.1;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100%;
+}
+
+.navbar {
+  background-color: #55C500;
+}
+
+#post-link {
+  background-color: #3F9201;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5%;
 }
 
 .top-wrapper .top-box {
