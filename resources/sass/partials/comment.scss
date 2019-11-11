@@ -1,0 +1,16 @@
+.comment-wrapper {
+  background-color: white;
+  margin: 3rem 5rem;
+  padding: 3rem;
+  .comment-main {
+    .comment-body {
+      margin-left: 1.2rem;
+    }
+    .comment-footer {
+      color: gray;
+      border-bottom: solid 3px #F8F9FC;
+      display:flex;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.user-page-wrapper {
+  background-color: #f8f9fc;
+  .user-info-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 3rem;
+    .user-info-box-left {
+      width: 20%;
+    }
+    .user-info-box-right {
+      padding-left: 20px;
+      width: 80%;
+      .user-detail {
+        background-color: #F9F9F9;
+        height: 150px;
+        width: 100%;
+      }
+    }
+  }
+  .user-board-wrapper {
+    margin: 3rem 5rem;
+    padding: 3rem;
+  }
+}
