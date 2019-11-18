@@ -8,6 +8,14 @@ jobs:
     docker:
       # Specify the version you desire here
       - image: circleci/php:7.2-node-browsers
+        environment:
+          # Define these information to be used later in script
+        - DB_CONNECTION: mysql
+        - DB_HOST: 127.0.0.1
+        - DB_PORT: 3306
+        - DB_DATABASE: circle_test
+        - DB_USERNAME: root
+        - DB_PASSWORD: ''
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
