@@ -18,6 +18,13 @@ jobs:
       #
       # - image: redis:2.8.19
 
+    environment:
+      - APP_DEBUG: true
+      - APP_ENV: testing
+      - APP_KEY: $APP_KEY
+      - DB_CONNECTION: board
+      - MYSQL_ALLOW_EMPTY_PASSWORD: true
+
     steps:
       - checkout
 
