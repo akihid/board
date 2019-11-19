@@ -51,21 +51,20 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary" id="login-btn">
-                                    {{ __('Login') }}
-                                </button>
-
-                                <button type="submit" class="btn btn-secondary" id="test-user-login-btn">テストユーザーでログイン</button>
-
-                                <!-- @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif -->
+                        <div class="form-group row mb-1">
+                            <div class="col-md-6 mx-auto ">
+                              <button type="submit" class="btn btn-primary mx-auto d-block">
+                                  {{ __('Login') }}
+                              </button>
                             </div>
                         </div>
+                    </form>
+
+                    <form class="col-md-6 mx-auto " action="{{ route('login') }}" method="POST">
+                      @csrf
+                      <input type="hidden" id="email" name="email" value="test@co.jp">
+                      <input type="hidden" id="password" name="password" value="password">
+                      <input type="submit" class="btn btn-secondary mx-auto d-block" value="テストユーザーでログイン">
                     </form>
                 </div>
             </div>
