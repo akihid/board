@@ -1,6 +1,5 @@
 require('./bootstrap');
 require('./partials/marked');
-require('./partials/login');
 
 $(document).on('click', '#test-user-login-btn', function() {
   var login_email = 'test@co.jp';
