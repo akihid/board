@@ -48,10 +48,6 @@ class BoardsTableSeeder extends Seeder
         ふつうのテキスト
       EOF
       ,
-      'リンクの表示' => <<< EOF
-        [Qiita](http://qiita.com/)
-      EOF
-      ,
       '太字とか斜体とか' => <<< EOF
         **テキスト**
         *テキスト*
