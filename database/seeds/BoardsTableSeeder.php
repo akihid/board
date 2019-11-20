@@ -15,7 +15,7 @@ class BoardsTableSeeder extends Seeder
     DB::table('boards')->delete();
 
     $data = array(
-      '見出しのサンプル' => <<< EOF
+      '見出しのサンプル' => <<<EOF
         # 見出し1
         ## 見出し2
         ### 見出し3
@@ -23,7 +23,7 @@ class BoardsTableSeeder extends Seeder
         ##### 見出し5
       EOF
       ,
-      '箇条書きリスト' => <<< EOF
+      '箇条書きリスト' => <<<EOF
         - リスト1
           - ネスト リスト1_1
             - ネスト リスト1_1_1
@@ -33,7 +33,7 @@ class BoardsTableSeeder extends Seeder
         - リスト3
       EOF
       ,
-      'シンタックスハイライト' => <<< EOF
+      'シンタックスハイライト' => <<<EOF
         ```ruby
         　class Hoge
         　  def hoge
@@ -43,18 +43,20 @@ class BoardsTableSeeder extends Seeder
         ```
       EOF
       ,
-      'インライン表示' => <<< EOF
+      'インライン表示' => <<<EOF
         `インライン表示`
         ふつうのテキスト
       EOF
       ,
-      '太字とか斜体とか' => <<< EOF
+      '太字とか斜体とか' => <<<EOF
         **テキスト**
         *テキスト*
         ~~テキスト~~
         ***
       EOF
+      ,
     );
+
     //ページネーション確認用データ
     $faker = Faker::create('ja_JP');
     for ($i = 1; $i <= 10; $i++) {
