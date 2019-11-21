@@ -17110,7 +17110,7 @@ readers do not read off random characters that represent icons */
 }
 
 .board-box .board-box-right {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .board-box .board-box-right .board-title {
@@ -17200,10 +17200,6 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
-.user-page-wrapper .user-board-wrapper {
-  margin: 3rem 3rem;
-}
-
 html {
   font-family: sans-serif;
   line-height: 1.1;
@@ -17219,6 +17215,10 @@ body {
 
 .navbar {
   background-color: #55C500;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 #post-link {
@@ -17246,11 +17246,8 @@ body {
           justify-content: center;
 }
 
-.avator_img_def {
-  height: 150px;
-}
-
-.avator_img_min {
-  height: 40px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 

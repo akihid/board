@@ -15,9 +15,9 @@
 
               <div class="mb-1">
                 @if(!empty($user->avator_url))
-                  <img class="avator_img_def d-block mx-auto" src="{{ $user->avator_url }}">
+                  <img class="d-block mx-auto" src="{{ $user->avator_url }}">
                 @else
-                  <img class="avator_img_def d-block mx-auto" src="/images/default.jpeg" alt="アバター画像">
+                  <img class="d-block mx-auto" src="/images/default.jpeg" alt="アバター画像">
                 @endif
               </div>
 

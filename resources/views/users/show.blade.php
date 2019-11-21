@@ -9,9 +9,9 @@
         <div class="user-info-wrapper">
           <div class="user-info-box-left">
             @isset ($user->avator_url)
-              <img class="avator_img_def" src="{{ $user->avator_url }}" alt="アバター画像">
+              <img src="{{ $user->avator_url }}" alt="アバター画像">
             @else
-              <img class="avator_img_def" src="/images/default.jpeg" alt="アバター画像">
+              <img src="/images/default.jpeg" alt="アバター画像">
             @endisset
           </div>
           <div class="user-info-box-right">
