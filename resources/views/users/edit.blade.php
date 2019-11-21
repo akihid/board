@@ -13,12 +13,8 @@
               @csrf
               @method('PATCH')
 
-              <div class="mb-1">
-                @if(!empty($user->avator_url))
-                  <img class="d-block mx-auto" src="{{ $user->avator_url }}">
-                @else
-                  <img class="d-block mx-auto" src="/images/default.jpeg" alt="アバター画像">
-                @endif
+              <div class="mb-1 text-center">
+                @include('users._user_avator_url', ['user' => $user])
               </div>
 
               <div class="form-group row">
