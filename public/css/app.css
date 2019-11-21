@@ -17201,8 +17201,7 @@ readers do not read off random characters that represent icons */
 }
 
 .user-page-wrapper .user-board-wrapper {
-  margin: 3rem 5rem;
-  padding: 3rem;
+  margin: 3rem 3rem;
 }
 
 html {

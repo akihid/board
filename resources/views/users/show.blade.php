@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="user-board-wrapper col-md-3">
       <div class="card">
         <div class="card-header">投稿一覧(最新5件)</div>
