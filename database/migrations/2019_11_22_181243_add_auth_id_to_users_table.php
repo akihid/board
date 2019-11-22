@@ -14,7 +14,7 @@ class AddAuthIdToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->bigInteger('auth_id');
+          $table->bigInteger('auth_id')->default(0);
         });
     }
 
