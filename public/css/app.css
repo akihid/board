@@ -17005,21 +17005,18 @@ readers do not read off random characters that represent icons */
           justify-content: center;
 }
 
-.board-page-wrapper .row .col-6 {
+.board-page-wrapper .row .markdown_field {
   padding: 0rem;
-  -webkit-box-flex: 0;
-          flex: none;
-  width: 48%;
 }
 
-.board-page-wrapper .row .col-6 #markdown_editor_textarea {
-  padding: 1rem;
+.board-page-wrapper .row .markdown_field #markdown_editor_textarea {
+  padding: 0rem;
   height: 29rem;
   width: 100%;
 }
 
-.board-page-wrapper .row .col-6 #markdown_preview {
-  padding: 1rem;
+.board-page-wrapper .row .markdown_field #markdown_preview {
+  padding: 0rem;
   height: 29rem;
   border: solid 1px gray;
   width: 100%;

@@ -5,11 +5,8 @@
   }
   .row {
     justify-content: center;
-    .col-6 {
+    .markdown_field {
       padding: 0rem;
-      flex: none;
-      width: 48%;
-
       #markdown_editor_textarea {
         padding: 1rem;
         height: 29rem;
