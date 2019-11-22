@@ -38634,28 +38634,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./partials/marked */ "./resources/js/partials/marked.js");
 
-$(document).on('click', '#test-user-login-btn', function () {
-  var login_email = 'test@co.jp';
-  var login_password = 'password';
-  var login_email_form = document.querySelector('#email');
-  var login_password_form = document.querySelector('#password');
-  login_email_form.value = login_email;
-  login_password_form.value = login_password;
-  document.querySelector('#login-btn').click();
-});
-$(function () {
-  $('#search_title_text').keyup(function () {
-    if ($('#search_title_text').val()) {
-      $('.searchclear').removeClass("d-none");
-    } else {
-      $('.searchclear').addClass("d-none");
-    }
-  });
-  $('.searchclear').click(function () {
-    $('#search_title_text').val('');
-    $('.searchclear').addClass("d-none");
-  });
-});
+__webpack_require__(/*! ./partials/board */ "./resources/js/partials/board.js");
 
 /***/ }),
 
@@ -38701,6 +38680,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/partials/board.js":
+/*!****************************************!*\
+  !*** ./resources/js/partials/board.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $('#search_title_text').focus(function () {
+    $('.searchclear').removeClass("d-none");
+  });
+  $('.searchclear').click(function () {
+    $('#search_title_text').val('');
+    $('.searchclear').addClass("d-none");
+  });
+});
 
 /***/ }),
 
