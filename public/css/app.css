@@ -17087,7 +17087,6 @@ readers do not read off random characters that represent icons */
   background-color: white;
   margin: 0px auto;
   padding: 20px;
-  height: 100vh;
 }
 
 .boards-wrapper h1 {
@@ -17135,7 +17134,6 @@ readers do not read off random characters that represent icons */
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  border-bottom: solid 3px #F6F6F6;
   -webkit-box-pack: center;
           justify-content: center;
 }
@@ -17249,5 +17247,17 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.searchclear {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  height: 14px;
+  margin: auto;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ccc;
 }
 

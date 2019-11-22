@@ -4,7 +4,6 @@
   <form class="form" action="{{ route('boards.index') }}" method="GET">
     @csrf
     <input type="text" name="keyword" class="form-control" placeholder="キーワードを入力">
-    <!-- <button class="btn btn-outline-light">検索</button> -->
   </form>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="ナビゲーションの切替">

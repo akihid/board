@@ -14,3 +14,18 @@ $(document).on('click', '#test-user-login-btn', function() {
   document.querySelector('#login-btn').click();
   
 });
+
+$(function() {
+  $('#search_title_text').keyup(function() {
+    if($('#search_title_text').val()){
+      $('.searchclear').removeClass("d-none");
+    } else {
+      $('.searchclear').addClass("d-none");
+    }
+  });
+
+	$('.searchclear').click(function(){
+    $('#search_title_text').val('');
+    $('.searchclear').addClass("d-none");
+  });
+})
