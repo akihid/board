@@ -17010,13 +17010,13 @@ readers do not read off random characters that represent icons */
 }
 
 .board-page-wrapper .row .markdown_field #markdown_editor_textarea {
-  padding: 0rem;
+  padding: 1rem;
   height: 29rem;
   width: 100%;
 }
 
 .board-page-wrapper .row .markdown_field #markdown_preview {
-  padding: 0rem;
+  padding: 1rem;
   height: 29rem;
   border: solid 1px gray;
   width: 100%;
@@ -17049,8 +17049,6 @@ readers do not read off random characters that represent icons */
 
 .item-page-wrapper .item-wrapper {
   background-color: white;
-  margin: 3rem 5rem;
-  padding: 3rem;
 }
 
 .item-page-wrapper .item-wrapper .item-header {
@@ -17150,8 +17148,6 @@ readers do not read off random characters that represent icons */
 
 .comment-wrapper {
   background-color: white;
-  margin: 3rem 5rem;
-  padding: 3rem;
 }
 
 .comment-wrapper .comment-main .comment-body {
