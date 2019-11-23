@@ -24,6 +24,7 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
+          'name' => 'required|max:10',
           'avator_url' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }

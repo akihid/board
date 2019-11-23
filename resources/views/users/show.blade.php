@@ -8,11 +8,7 @@
         <div class="card-header">{{$user->name}}のユーザーページ</div>
         <div class="user-info-wrapper">
           <div class="user-info-box-left">
-            @isset ($user->avator_url)
-              <img class="avator_img_def" src="{{ $user->avator_url }}" alt="アバター画像">
-            @else
-              <img class="avator_img_def" src="/images/default.jpeg" alt="アバター画像">
-            @endisset
+            @include('users._user_avator_url', ['user' => $user])
           </div>
           <div class="user-info-box-right">
             <div class="user-detail">{!!  nl2br($user->detail) !!}</div>

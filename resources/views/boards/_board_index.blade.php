@@ -1,11 +1,7 @@
 <div class="board-box">
   <div class="board-box-left">
     <a href="{{ route('users.show', ['user'=>$board->user]) }}">
-      @isset ($board->user->avator_url)
-        <img class="avator_img_min" src="{{ $board->user->avator_url }}" alt="アバター画像">
-      @else
-        <img class="avator_img_min" src="/images/default.jpeg" alt="アバター画像">
-      @endisset
+      @include('users._user_avator_url', ['user' => $board->user])
     </a>
   </div>
   <div class="board-box-right">

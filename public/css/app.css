@@ -17005,20 +17005,17 @@ readers do not read off random characters that represent icons */
           justify-content: center;
 }
 
-.board-page-wrapper .row .col-6 {
+.board-page-wrapper .row .markdown_field {
   padding: 0rem;
-  -webkit-box-flex: 0;
-          flex: none;
-  width: 48%;
 }
 
-.board-page-wrapper .row .col-6 #markdown_editor_textarea {
+.board-page-wrapper .row .markdown_field #markdown_editor_textarea {
   padding: 1rem;
   height: 29rem;
   width: 100%;
 }
 
-.board-page-wrapper .row .col-6 #markdown_preview {
+.board-page-wrapper .row .markdown_field #markdown_preview {
   padding: 1rem;
   height: 29rem;
   border: solid 1px gray;
@@ -17052,8 +17049,6 @@ readers do not read off random characters that represent icons */
 
 .item-page-wrapper .item-wrapper {
   background-color: white;
-  margin: 3rem 5rem;
-  padding: 3rem;
 }
 
 .item-page-wrapper .item-wrapper .item-header {
@@ -17087,7 +17082,6 @@ readers do not read off random characters that represent icons */
   background-color: white;
   margin: 0px auto;
   padding: 20px;
-  height: 100vh;
 }
 
 .boards-wrapper h1 {
@@ -17110,7 +17104,7 @@ readers do not read off random characters that represent icons */
 }
 
 .board-box .board-box-right {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .board-box .board-box-right .board-title {
@@ -17135,7 +17129,6 @@ readers do not read off random characters that represent icons */
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  border-bottom: solid 3px #F6F6F6;
   -webkit-box-pack: center;
           justify-content: center;
 }
@@ -17155,8 +17148,6 @@ readers do not read off random characters that represent icons */
 
 .comment-wrapper {
   background-color: white;
-  margin: 3rem 5rem;
-  padding: 3rem;
 }
 
 .comment-wrapper .comment-main .comment-body {
@@ -17200,10 +17191,6 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
-.user-page-wrapper .user-board-wrapper {
-  margin: 3rem 3rem;
-}
-
 html {
   font-family: sans-serif;
   line-height: 1.1;
@@ -17219,6 +17206,10 @@ body {
 
 .navbar {
   background-color: #55C500;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 #post-link {
@@ -17246,11 +17237,20 @@ body {
           justify-content: center;
 }
 
-.avator_img_def {
-  height: 150px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.avator_img_min {
-  height: 40px;
+.searchclear {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  height: 14px;
+  margin: auto;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ccc;
 }
 
