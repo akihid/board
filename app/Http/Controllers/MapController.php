@@ -8,7 +8,7 @@ class MapController extends Controller
 {
   public function index(Request $request)
     {
-      $map_src = "https://maps.googleapis.com/maps/api/js?key=".env('MAP_API_KEY');
+      $map_src = "https://maps.googleapis.com/maps/api/js?key=".env('MAP_API_KEY')."&libraries=places";
       return view('maps.index', compact('map_src'));
     }
 }

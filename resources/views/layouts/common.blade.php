@@ -13,7 +13,7 @@
     </head>
     <body>
         @include('layouts.navbar')
-        <main class="py-4">
+        <main class="py-4 h-100">
 
           @if (session('message'))
             <div class="alert alert-success">{{ session('message') }}</div>
