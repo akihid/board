@@ -33,8 +33,8 @@ $(function() {
   }
 
   function CreateMyPositionMarker() {
-    var image = 'http://maps.google.com/mapfiles/ms/micons/man.png';
-    var marker = new google.maps.Marker({
+    let image = 'http://maps.google.com/mapfiles/ms/micons/man.png';
+    let marker = new google.maps.Marker({
       position: pos,
       map: map,
       icon: image
@@ -44,7 +44,20 @@ $(function() {
 
   function getGurunabiRequest(){
     var request = new XMLHttpRequest();
-    var url = 'https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=baa16a1d72c88f9cb1b62a1c33bf0270&wifi=1&range=5&hit_per_page=100&category_l=RSFST18000,RSFST20000&latitude=' + lat + '&longitude=' + lng;
+    var range = document.getElementById('range').value;
+    var category_l_list = document.getElementById('category_l');
+    var category_l = "";
+    for ( var i=0,l=category_l_list.length; l>i; i++ ) {
+      if ( category_l_list[i].selected ) {
+        if (category_l) {
+          category_l += ",";
+        } 
+        category_l += category_l_list[i].value;
+      }
+    }
+    var name = document.getElementById('search_shop_name').value;
+
+    var url = 'https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=baa16a1d72c88f9cb1b62a1c33bf0270&wifi=1&range='+ range + '&hit_per_page=100&category_l='+ category_l + '&latitude=' + lat + '&longitude=' + lng + '&freeword=' + name; 
     request.responseType = 'json';
     request.open('GET', url, true);
     request.onload = function () {
@@ -91,4 +104,30 @@ $(function() {
       current_info_window = info_window;
     });
   }
+
+  $('.select_category_box').select2({
+    width: '500px',
+    placeholder: 'Please Select',
+    allowClear: true,
+    // このオプションは、複数選択モードを有効にします。
+    multiple: true
+  }).on('select2:opening select2:closing', function () {
+    // select2関数を開いたり閉じたりするときに検索ボックスを非表示にします。
+    var $searchfield = $(this).parent().find('.select2-search__field');
+    $searchfield.prop('disabled', true);
+  });
+
+  $('.select_range_box').select2({
+    width: '100px',
+    placeholder: 'Please Select',
+    allowClear: true,
+  }).on('select2:opening select2:closing', function () {
+    // select2関数を開いたり閉じたりするときに検索ボックスを非表示にします。
+    var $searchfield = $(this).parent().find('.select2-search__field');
+    $searchfield.prop('disabled', true);
+  });
+
+  document.getElementById("map_search_btn").onclick = function() {
+    initMap();
+  };
 })
