@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light">
+<nav class="navbar navbar-expand-md navbar-light">
   <a class="navbar-brand text-white" href="/">Board</a>
 
   <form class="form" action="{{ route('boards.index') }}" method="GET">
@@ -27,6 +27,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link text-white text-center" id="post-link" href="{{ route('boards.create') }}">投稿する</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white text-center" href="{{ route('maps.index') }}"><i class="fas fa-mug-hot fa-fw"></i>近場のカフェ表示</a>
         </li>
         <!-- ドロップダウンメニュー -->
         <li class="nav-item dropdown">

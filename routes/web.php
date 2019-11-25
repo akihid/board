@@ -24,3 +24,5 @@ Route::resource('users', 'UserController', ['only' => ['edit', 'update', 'show']
 Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider')->name('twitter.login');;
 // コールバックURL
 Route::get('auth/twitter/callback', 'Auth\TwitterController@handleProviderCallback')->name('twitter.callback');;
+//マップ表示URL
+Route::resource('maps', 'MapController', ['only' => ['index']]);

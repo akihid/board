@@ -13,7 +13,7 @@
           <div class="user-info-box-right">
             <div class="user-detail">{!!  nl2br($user->detail) !!}</div>
             @if ($user->id == Auth::id())
-              <a class="btn btn-primary btn-sm d-block mx-auto" href="{{ route('users.edit', ['user'=>$user]) }}">ユーザー情報の更新</a>
+              <div class="text-right"><a class="btn btn-outline-info btn-sm pull-right" href="{{ route('users.edit', ['user'=>$user]) }}"><i class="fas fa-user-edit fa-fw"></i>ユーザー情報の更新</a></div>
             @endif
           </div>
         </div>
