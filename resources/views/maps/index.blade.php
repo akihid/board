@@ -51,10 +51,15 @@
     </div>
   </div>
 </div>
-    
 <div class="col-md-8 mx-auto">
   <div id="map"></div>
 </div>
+
+<footer class="text-center pt-2">
+  <a href="https://api.gnavi.co.jp/api/scope/" target="_blank">
+  <img src="https://api.gnavi.co.jp/api/img/credit/api_265_65.gif" width="265" height="65" border="0" alt="グルメ情報検索サイト　ぐるなび">
+  </a>
+</footer>
 
 
 
