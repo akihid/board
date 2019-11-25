@@ -28,6 +28,9 @@
         <li class="nav-item">
           <a class="nav-link text-white text-center" id="post-link" href="{{ route('boards.create') }}">投稿する</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-white text-center" href="{{ route('maps.index') }}">近場のカフェ表示</a>
+        </li>
         <!-- ドロップダウンメニュー -->
         <li class="nav-item dropdown">
           <a class="nav-link text-white dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
