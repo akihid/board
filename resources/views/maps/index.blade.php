@@ -2,8 +2,8 @@
 @section('content')
 
 <div class="row mb-2">
-  <div class="col-md-10 mx-auto form-row pt-2 bg-white">
-    <div class="form-group col-xl-2">
+  <div class="col-lg-8 col-md-12 mx-auto form-row pt-2 bg-white">
+    <div class="form-group col-lg-2 col-md-12">
       <label class="badge badge-light">範囲:</label></br>
       <select class="select_range_box" id="range">
         <option></option>
@@ -14,7 +14,7 @@
         <option value="5">3000m</option>
       </select>
     </div>
-    <div class="form-group col-xl-6">
+    <div class="form-group col-lg-6 col-md-12">
       <label class="badge badge-light">店の種類:</label></br>
       <select class="select_category_box" id="category_l"multiple>
       <option></option>
@@ -42,7 +42,7 @@
         <option value="RSFST90000">その他の料理</option>
       </select>
     </div>
-    <div class="form-group col-xl-4">
+    <div class="form-group col-lg-4 col-md-12">
       <label class="badge badge-light">店名:</label></br>
       <div class="form-inline">
         <input type="text" class="form-control" id="search_shop_name">
@@ -51,7 +51,7 @@
     </div>
   </div>
 </div>
-<div class="col-md-8 mx-auto">
+<div class="col-lg-8 col-md-12 mx-auto">
   <div id="map"></div>
 </div>
 

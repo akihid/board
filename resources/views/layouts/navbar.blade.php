@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand text-white" href="/">Board</a>
 
   <form class="form" action="{{ route('boards.index') }}" method="GET">

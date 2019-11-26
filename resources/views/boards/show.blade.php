@@ -13,13 +13,13 @@
   <div class="item-wrapper m-4 p-2">
     <div class="item-header d-flex align-items-center container m-0 p-0">
       <div class="row w-100">
-        <div class="date col-md-3 col-7 small">
+        <div class="date col-lg-3 col-md-4 col-7 small">
           {{$board->created_at->format('Y年m月d日')}}
           <a class="text-primary" href="{{ route('users.show', ['user'=>$board->user]) }}">{{$board->user->name}}</a>
         </div>
 
           @if ($board->user_id == Auth::id())
-            <div class="btn-group col-md-2 col-5">
+            <div class="btn-group col-lg-2 col-md-3 col-5">
               <a class="btn btn-primary btn-sm" href="{{ route('boards.edit', ['board'=>$board]) }}">修正する</a>
               <form method="post" action="{{ route('boards.destroy', ['board'=>$board]) }}">
                 @csrf

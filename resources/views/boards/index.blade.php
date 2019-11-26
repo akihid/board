@@ -2,7 +2,7 @@
 @section('content')
 
   <div class="row">
-    <div class="search-wrapper col-md-6 mb-3">
+    <div class="search-wrapper col-lg-6 col-md-12 mb-3">
       <form class="search-box" action="{{ route('boards.index') }}" method="GET">
         @csrf
         <div class="btn-group w-75">
@@ -15,7 +15,7 @@
   </div>
 
   <div class="row">
-    <div class="boards-wrapper col-md-6">
+    <div class="boards-wrapper col-lg-6 col-md-12">
       <h1>投稿一覧</h1>
       @forelse ($boards as $board)
         @include('boards._board_index', ['board' => $board])

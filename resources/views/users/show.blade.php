@@ -3,7 +3,7 @@
 
 <div class="user-page-wrapper">
   <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-lg-8 col-md-12">
       <div class="card">
         <div class="card-header">{{$user->name}}のユーザーページ</div>
         <div class="user-info-wrapper">
@@ -22,7 +22,7 @@
   </div>
 
   <div class="row justify-content-center">
-    <div class="m-3 col-md-3">
+    <div class="m-3 col-lg-3 col-md-12">
       <div class="card">
         <div class="card-header">投稿一覧(最新5件)</div>
         @forelse ($boards as $board)
@@ -32,7 +32,7 @@
         @endforelse
       </div>
     </div>
-    <div class="m-3 col-md-3">
+    <div class="m-3 col-lg-3 col-md-12">
       <div class="card">
         <div class="card-header">いいね一覧(最新5件)</div>
         @forelse ($likes as $like)
@@ -42,7 +42,7 @@
         @endforelse
       </div>
     </div>
-    <div class="m-3 col-md-3">
+    <div class="m-3 col-lg-3 col-md-12">
       <div class="card">
         <div class="card-header">コメント一覧(最新5件)</div>
           @forelse ($comments as $comment)
